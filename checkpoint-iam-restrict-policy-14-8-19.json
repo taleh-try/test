@@ -1,4 +1,5 @@
-{"Version": "2012-10-17",
+{
+	"Version": "2012-10-17",
     "Statement": [
         {
             "Sid": "allowed-actions",
@@ -15,11 +16,9 @@
                 "autoscaling-plans:*",
                 "autoscaling:*"
             ],
-            "Resource": "*"
-        }
-    ]
-},
-    {
+            "Resource": ["*"]
+        },
+		{
             "Sid": "RestrictHighInstances",
             "Effect": "Deny",
             "Action": "ec2:RunInstances",
@@ -37,7 +36,7 @@
 						"*.18xlarge",
 						"*.24xlarge",
 						"*.32xlarge",
-						"*.metal",
+						"*.metal"
 						
 						
 					]
@@ -45,4 +44,4 @@
             }
         }
     ]
-}
+}	
