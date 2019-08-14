@@ -1,0 +1,48 @@
+{"Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "allowed-actions",
+            "Effect": "Allow",
+            "Action": [
+                "iam:*",
+                "application-autoscaling:*",
+                "aws-marketplace:*",
+                "s3:*",
+                "ec2:*",
+                "cloudformation:*",
+                "aws-marketplace-management:*",
+                "elasticloadbalancing:*",
+                "autoscaling-plans:*",
+                "autoscaling:*"
+            ],
+            "Resource": "*"
+        }
+    ]
+},
+    {
+            "Sid": "RestrictHighInstances",
+            "Effect": "Deny",
+            "Action": "ec2:RunInstances",
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "ec2:InstanceType": [
+						"*.4xlarge",
+						"*.6xlarge",
+						"*.8xlarge",
+						"*.9xlarge",
+						"*.10xlarge",
+						"*.12xlarge",
+						"*.16xlarge",
+						"*.18xlarge",
+						"*.24xlarge",
+						"*.32xlarge",
+						"*.metal",
+						
+						
+					]
+                }
+            }
+        }
+    ]
+}
