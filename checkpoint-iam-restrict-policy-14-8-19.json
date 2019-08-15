@@ -18,30 +18,5 @@
             ],
             "Resource": ["*"]
         },
-		{
-            "Sid": "RestrictHighInstances",
-            "Effect": "Deny",
-            "Action": "ec2:RunInstances",
-            "Resource": "*",
-            "Condition": {
-                "StringEquals": {
-                    "ec2:InstanceType": [
-						"*.4xlarge",
-						"*.6xlarge",
-						"*.8xlarge",
-						"*.9xlarge",
-						"*.10xlarge",
-						"*.12xlarge",
-						"*.16xlarge",
-						"*.18xlarge",
-						"*.24xlarge",
-						"*.32xlarge",
-						"*.metal"
-						
-						
-					]
-                }
-            }
-        }
     ]
 }	
