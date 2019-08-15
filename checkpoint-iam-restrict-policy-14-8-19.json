@@ -16,7 +16,9 @@
                 "autoscaling-plans:*",
                 "autoscaling:*"
             ],
-            "Resource": "*"
+            "Resource": [
+		    "*"
+		    ]
         },
     ]
 }	
