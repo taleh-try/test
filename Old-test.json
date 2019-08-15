@@ -2,37 +2,20 @@
     "Version": "2012-10-17",
     "Statement": [
 		{
-		  "Sid": "AllowRestrictedIAM",
-		  "Effect": "Allow",
-		  "Action": [
-			"iam:AddRoleToInstanceProfile",
-			"iam:AttachRolePolicy",
-			"iam:CreateInstanceProfile",
-			"iam:CreatePolicy",
-			"iam:CreatePolicyVersion",
-			"iam:CreateRole",
-			"iam:DeleteInstanceProfile",
-			"iam:GetInstanceProfile",
-			"iam:GetPolicy",
-			"iam:GetPolicyVersion",
-			"iam:GetRole",
-			"iam:GetRolePolicy",
-			"iam:ListAttachedRolePolicies",
-			"iam:ListEntitiesForPolicy",
-			"iam:ListInstanceProfiles",
-			"iam:ListInstanceProfilesForRole",
-			"iam:ListPolicies",
-			"iam:ListPolicyVersions",
-			"iam:ListRolePolicies",
-			"iam:ListRoles",
-			"iam:PassRole",
-			"iam:PutRolePolicy",
-			"iam:RemoveRoleFromInstanceProfile",
-			"iam:SetDefaultPolicyVersion",
-			"iam:SimulateCustomPolicy",
-			"iam:DeleteRole",
-			"iam:DeleteRolePolicy"
-		  ],
+		  "Sid": "allowed-actions",
+            	"Effect": "Allow",
+            	"Action": [
+                "iam:*",
+                "application-autoscaling:*",
+                "aws-marketplace:*",
+                "s3:*",
+                "ec2:*",
+                "cloudformation:*",
+                "aws-marketplace-management:*",
+                "elasticloadbalancing:*",
+                "autoscaling-plans:*",
+                "autoscaling:*"
+            ],
 		  "Resource": [
 			"*"
 		  ]
